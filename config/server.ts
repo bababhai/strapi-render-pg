@@ -1,12 +1,11 @@
-export default ({ env }) => {
-  const port = parseInt(process.env.PORT); 
-  console.log(`Binding server to port: ${port}`); // Add this line to log the port value
+const express = require('express');
+const app = express();
+const port = parseInt(process.env.PORT, 10) || 10000;
 
-  return {
-    host: '0.0.0.0',
-    port: port,
-    app: {
-      keys: env.array('APP_KEYS'),
-    },
-  };
-};
+app.get('/', (req, res) => {
+  res.send('Hello, Render!');
+});
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${port}`);
+});
