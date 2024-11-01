@@ -1,11 +1,7 @@
-const express = require('express');
-const app = express();
-const port = parseInt(process.env.PORT, 10) || 10000;
-
-app.get('/', (req, res) => {
-  res.send('Hello, Render!');
-});
-
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server running on http://0.0.0.0:${port}`);
+module.exports = ({ env }) => ({
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  app: {
+    keys: env.array('APP_KEYS'),
+  },
 });
