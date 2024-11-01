@@ -1,7 +1,12 @@
-export default ({ env }) => ({
-  host: '0.0.0.0', // Ensures the server binds to 0.0.0.0
-  port: parseInt(process.env.PORT), // Use the environment PORT provided by Render
-  app: {
-    keys: env.array('APP_KEYS'),
-  },
-});
+export default ({ env }) => {
+  const port = parseInt(process.env.PORT); 
+  console.log(`Binding server to port: ${port}`); // Add this line to log the port value
+
+  return {
+    host: '0.0.0.0',
+    port: port,
+    app: {
+      keys: env.array('APP_KEYS'),
+    },
+  };
+};
