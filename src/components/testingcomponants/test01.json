@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_testingcomponants_test01s",
+  "info": {
+    "displayName": "test01"
+  },
+  "options": {},
+  "attributes": {
+    "test_field": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "testdata",
+  "info": {
+    "singularName": "testdatas",
+    "pluralName": "testdata",
+    "displayName": "testdata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "testDatacomp": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "testingcomponants.test01"
+    }
+  }
+}
